@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<body>
+		<script>
+			var number = prompt("Please enter a number");
+			var num1 = number % 1000;
+			var thousand = number - num1;
+			var real_thousand = thousand/1000;
+			var num2 = number % 100;
+			var hundred = thousand - num2;
+			var real_hundred = hundred/100;
+			var num3 = number % 10;
+			var ten = hundred - num3;
+			var real_ten = ten/10;
+			var num4 = number % 1;
+			var one = ten - num4;
+			var real_one = one/1;
+			console.log(number + "\n" + real_thousand + " thousands \n" + real_hundred + " hundreds \n" + real_ten + " tens \n" + real_one + " ones");
+		</script>
+	</body>
+</head>
+</html>
