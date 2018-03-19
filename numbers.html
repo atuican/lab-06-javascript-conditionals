@@ -3,20 +3,31 @@
 <head>
 	<body>
 		<script>
-			var number = prompt("Please enter a number");
-			var num1 = number % 1000;
-			var thousand = number - num1;
-			var real_thousand = thousand/1000;
-			var num2 = number % 100;
-			var hundred = thousand - num2;
-			var real_hundred = hundred/100;
-			var num3 = number % 10;
-			var ten = hundred - num3;
-			var real_ten = ten/10;
-			var num4 = number % 1;
-			var one = ten - num4;
-			var real_one = one/1;
-			console.log(number + "\n" + real_thousand + " thousands \n" + real_hundred + " hundreds \n" + real_ten + " tens \n" + real_one + " ones");
+			var num = prompt("Please enter a four-digit number:");
+			alert(num + " is the number you entered!")
+
+			//thousands place
+			var thousand_mod = num % 1000; //2468 % 1000 = 468
+			var thousand = num - thousand_mod; //2468 - 468 = 2000;
+			var thousand_real = thousand / 1000; //2000 / 1000 = 2;
+			console.log(thousand_real + " thousands");
+			
+			//hundreds place
+			var threedigit = thousand_mod;
+			var hundred_mod = threedigit % 100;
+			var hundred = threedigit - hundred_mod;
+			var hundred_real = hundred / 100;
+			console.log(hundred_real + " hundreds");
+			
+			//tens place
+			var twodigit = hundred_mod;
+			var ten_mod = twodigit % 10;
+			var ten = twodigit - ten_mod;
+			var ten_real = ten / 10;
+			console.log(ten_real + " tens");
+			
+			//ones place
+			console.log(ten_mod + " ones");
 		</script>
 	</body>
 </head>
